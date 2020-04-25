@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="bdti.ico" type="image/x-icon">
+    <title>百毒一下，你就知道！</title>
+    <style>
+        *,input{
+            margin: 0;
+            padding: 0;
+        }
+        body{
+            font: 12px arial;
+            min-width: 1250px;
+        }
+        .div-body{
+            text-align: center;
+            padding-top: 120px;
+        }
+        .logo{
+            width: 210px;
+            margin: auto;
+        }
+        .logo img{
+            display: inline-block;
+            width: 100%;
+            margin: 30px auto;
+        }
+        .sousuo #inp{
+            width: 540px;
+            height: 30px;
+            font-size: 15px;
+        }
+        .sousuo #btn{
+            margin-left: -3px;
+            width: 100px;
+            height: 35px;
+            cursor: pointer;
+            color: #fff;
+            font-size: 15px;
+            background: #3385ff;
+            border: none;
+            border-bottom: 1px solid #2d78f4;
+            outline: none;
+        }
+        .div-footer{
+            background: #fafafa;
+            width: 100%;
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            height: 40px;
+            color: #999;
+            margin: 0;
+            text-align: center;
+            line-height: 40px;
+            min-width: 1250px;
+        }
+    </style>
+</head>
+<body>
+    <div class="div-body">
+        <!-- <div class="div-nav">
+            <nav>
+                <a href="#"></a>
+                <a href="#"></a>
+                <a href="#"></a>
+                <a href="#"></a>
+            </nav>
+        </div> -->
+        <div class="logo">
+            <img src="bd_logo1.png" alt="Wdnmd!">
+        </div>
+        <div class="sousuo">
+            <input class="search-txt" type='text' id='inp' />
+            <input class="search-btn" type='button' id='btn' value='百毒一下' />
+        </div>
+        <div class="div-footer">
+            做着玩！若有侵权，联系删除！<a href="mailto:2998985152@qq.com">2998985152@qq.com邮箱</a>
+        </div>
+    </div>
+</body>
+<script>
+    var oInp = document.getElementById('inp');
+    var oBtn = document.getElementById('btn');
+
+    oBtn.onclick = function () {
+        Search();
+    }
+
+
+    document.onkeydown = function () {
+        if (event.keyCode == 13) {
+            Search();
+        }
+    }
+
+    function Search() {
+        var  url = 'https://www.baidu.com/s?wd=' + oInp.value;
+        window.open(url);
+    }
+    document.getElementById('inp').focus();
+</script>
+</html>
